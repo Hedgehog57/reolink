@@ -82,7 +82,7 @@ class ReolinkApi(object):
                             preset_name = preset["name"]
                             preset_id = int(preset["id"])
                             self._ptzpresets[preset_name] = preset_id
-                            _LOGGER.debug(f"Got preset {preset_name} with ID {preset_id}")
+                            _LOGGER.debug(f"Got preset {self._ptzpresets[preset_name]} with ID {self._ptzpresets[preset_id]}")
                         else:
                             _LOGGER.debug(f"Preset is not enabled: {preset}")
             except:
